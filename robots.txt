@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /assets/
+
+# Allow important directories
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Sitemap location
+Sitemap: https://kursatemre.github.io/sitemap.xml
