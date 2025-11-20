@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ec4899"/>
+  <text x="50%" y="45%" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle" dy=".3em">
+    Landing Page CRO
+  </text>
+  <text x="50%" y="57%" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" dy=".3em">
+    Conversion Optimization
+  </text>
+</svg>

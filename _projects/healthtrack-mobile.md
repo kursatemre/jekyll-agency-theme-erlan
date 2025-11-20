@@ -3,7 +3,7 @@ title: "HealthTrack Mobil Uygulaması"
 client: "HealthTrack Inc."
 category: "mobile"
 date: 2023-11-20
-image: "/assets/images/projects/healthtrack.jpg"
+image: "/assets/images/projects/healthtrack.svg"
 technologies:
   - "React Native"
   - "Firebase"

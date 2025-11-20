@@ -5,7 +5,7 @@ date: 2023-11-10 14:30:00 +0300
 author: "Zeynep Kaya"
 categories: ["tasarım", "ui-ux"]
 tags: ["glassmorphism", "neumorphism", "design trends", "css"]
-image: "/assets/images/blog/glassmorphism-neumorphism.jpg"
+image: "/assets/images/blog/glassmorphism-neumorphism.svg"
 excerpt: "Modern tasarım trendleri olan glassmorphism ve neumorphism'i detaylı inceliyoruz. CSS ile nasıl uygulayacağınızı öğrenin..."
 ---
 

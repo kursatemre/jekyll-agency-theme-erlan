@@ -5,7 +5,7 @@ date: 2023-11-15 10:00:00 +0300
 author: "Ahmet Yılmaz"
 categories: ["web-geliştirme", "teknoloji"]
 tags: ["web development", "trends", "javascript", "ai"]
-image: "/assets/images/blog/web-trends-2024.jpg"
+image: "/assets/images/blog/web-trends-2024.svg"
 excerpt: "2024 yılında web geliştirme dünyasında öne çıkacak trendleri ve teknolojileri keşfedin. AI entegrasyonundan performans optimizasyonuna kadar..."
 ---
 

@@ -1,11 +1,20 @@
 # Jekyll Yapılandırması
-title: Erlan - Modern Ajans Teması
+title: Erlan - Dijital Çözüm Ortağınız
 email: info@erlan.com
 description: >-
-  Modern, profesyonel ajans ve blog teması. Web geliştirme, tasarım ve 
-  dijital pazarlama hizmetleri için özel olarak tasarlanmış Jekyll teması.
+  Web yazılım geliştirme, sosyal medya yönetimi, Meta reklam yönetimi ve
+  dijital pazarlama konusunda uzman ajans. Modern teknolojilerle güçlü çözümler.
 baseurl: ""
 url: "https://kursatemre.github.io"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Pagination
+paginate: 9
+paginate_path: "/blog/page:num/"
 
 # Sosyal Medya Bağlantıları
 social:
@@ -22,9 +31,9 @@ address: "İstanbul, Türkiye"
 
 # Yazar Bilgileri
 author:
-  name: "Erlan Ekibi"
+  name: "Erlan"
   email: "info@erlan.com"
-  bio: "Web geliştirme ve dijital çözümler konusunda uzman ekip"
+  bio: "Web yazılım geliştirme, sosyal medya yönetimi ve dijital pazarlama konusunda uzman ajans"
 
 # Koleksiyonlar
 collections:

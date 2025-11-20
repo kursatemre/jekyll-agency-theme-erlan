@@ -3,7 +3,7 @@ title: "TechStart E-Ticaret Platformu"
 client: "TechStart A.Ş."
 category: "web"
 date: 2023-09-15
-image: "/assets/images/projects/techstart.jpg"
+image: "/assets/images/projects/techstart.svg"
 technologies:
   - "React"
   - "Node.js"

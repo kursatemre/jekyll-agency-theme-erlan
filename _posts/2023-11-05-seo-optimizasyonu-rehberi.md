@@ -5,7 +5,7 @@ date: 2023-11-05 09:00:00 +0300
 author: "Mehmet Demir"
 categories: ["seo", "dijital-pazarlama"]
 tags: ["seo", "arama motoru optimizasyonu", "google", "digital marketing"]
-image: "/assets/images/blog/seo-guide-2024.jpg"
+image: "/assets/images/blog/seo-guide-2024.svg"
 excerpt: "Web sitenizin arama motorlarında üst sıralara çıkması için bilmeniz gereken her şey. Teknik SEO'dan içerik stratejisine kapsamlı rehber..."
 ---
 

@@ -339,6 +339,16 @@ Katkılarınızı bekliyoruz! Pull request göndermekten çekinmeyin.
 
 Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
 
+## 📸 Görseller
+
+Temada yer alan görseller placeholder/demo görselleridir. Kendi projelerinizde kullanmak için:
+
+1. **assets/images/projects/** - Proje görselleri (800x600px önerilir)
+2. **assets/images/blog/** - Blog feature image'ları (1200x630px önerilir)
+3. **assets/images/services/** - Hizmet görselleri (600x400px önerilir)
+
+> 💡 **Not:** Mevcut görseller SVG formatında placeholder'lardır. Gerçek projelerinizde JPG/PNG/WebP kullanmanız önerilir.
+
 ## 👨‍💻 Geliştirici
 
 **Erlan Ekibi**

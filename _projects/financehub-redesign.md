@@ -3,7 +3,7 @@ title: "FinanceHub Dashboard Redesign"
 client: "FinanceHub Ltd."
 category: "design"
 date: 2023-10-30
-image: "/assets/images/projects/financehub.jpg"
+image: "/assets/images/projects/financehub.svg"
 technologies:
   - "Figma"
   - "Adobe XD"

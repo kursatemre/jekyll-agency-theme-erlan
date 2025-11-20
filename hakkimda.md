@@ -1,53 +1,53 @@
 ---
 layout: page
 title: "Hakkımda"
-description: "Dijital dönüşüm yolculuğunuzda yanınızdaki profesyonel ekip"
+description: "Modern web teknolojileri ve dijital pazarlama ile işinizi büyütüyoruz"
 permalink: /hakkimda/
 ---
 
 <div class="max-w-4xl mx-auto">
 
-## Biz Kimiz?
+## Erlan Kimdir?
 
-**Erlan**, dijital dünyada fark yaratan, yenilikçi ve kullanıcı odaklı çözümler üreten bir ajansız. 2013 yılında kurulan ekibimiz, web geliştirme, tasarım ve dijital pazarlama alanlarında 10 yılı aşkın deneyime sahiptir.
+**Erlan**, modern web teknolojileri ve dijital pazarlama alanında uzmanlaşmış bir ajans. React, Next.js, e-ticaret çözümleri, SaaS geliştirme, sosyal medya ve Meta reklam yönetimi konularında profesyonel hizmetler sunuyoruz.
 
 ### Misyonumuz
 
-İşletmelerin dijital dönüşüm süreçlerinde güvenilir bir iş ortağı olmak, modern teknolojileri kullanarak onların hedeflerine ulaşmalarına yardımcı olmak.
+İşletmelerin dijital dünyada güçlü bir varlık oluşturmasını sağlamak. En son web teknolojileri ve etkili dijital pazarlama stratejileriyle müşterilerimizin başarısına katkıda bulunmak.
 
 ### Vizyonumuz
 
-Türkiye'nin dijital dönüşümüne öncülük eden, uluslararası standartlarda hizmet veren bir teknoloji şirketi olmak.
+Türkiye'nin en güvenilir web geliştirme ve dijital pazarlama ajansı olmak, uluslararası standartlarda hizmet sunmak.
 
-## Değerlerimiz
+## Uzmanlık Alanlarımız
 
 <div class="grid md:grid-cols-2 gap-8 my-12">
   <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg">
-    <div class="text-4xl mb-4">🎯</div>
-    <h3 class="text-xl font-semibold mb-2">Kalite</h3>
-    <p class="text-gray-600 dark:text-gray-400">Her projede en yüksek kalite standartlarını hedefliyoruz.</p>
+    <div class="text-4xl mb-4">⚛️</div>
+    <h3 class="text-xl font-semibold mb-2">Modern Web Teknolojileri</h3>
+    <p class="text-gray-600 dark:text-gray-400">React, Next.js, TypeScript ile hızlı ve SEO-friendly web uygulamaları geliştiriyoruz.</p>
   </div>
   
   <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg">
-    <div class="text-4xl mb-4">🚀</div>
-    <h3 class="text-xl font-semibold mb-2">İnovasyon</h3>
-    <p class="text-gray-600 dark:text-gray-400">Yeni teknolojileri takip ediyor ve projelerimizde kullanıyoruz.</p>
+    <div class="text-4xl mb-4">🛒</div>
+    <h3 class="text-xl font-semibold mb-2">E-Ticaret Çözümleri</h3>
+    <p class="text-gray-600 dark:text-gray-400">Shopify, WooCommerce ve özel e-ticaret platformları ile online satışlarınızı artırıyoruz.</p>
   </div>
   
   <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg">
-    <div class="text-4xl mb-4">🤝</div>
-    <h3 class="text-xl font-semibold mb-2">İşbirliği</h3>
-    <p class="text-gray-600 dark:text-gray-400">Müşterilerimizle uzun vadeli ortaklıklar kuruyoruz.</p>
+    <div class="text-4xl mb-4">📱</div>
+    <h3 class="text-xl font-semibold mb-2">Sosyal Medya Yönetimi</h3>
+    <p class="text-gray-600 dark:text-gray-400">Instagram, Facebook, TikTok'ta marka bilinirliğinizi artırıyoruz.</p>
   </div>
   
   <div class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg">
-    <div class="text-4xl mb-4">💡</div>
-    <h3 class="text-xl font-semibold mb-2">Yaratıcılık</h3>
-    <p class="text-gray-600 dark:text-gray-400">Her projede özgün ve yaratıcı çözümler üretiyoruz.</p>
+    <div class="text-4xl mb-4">📊</div>
+    <h3 class="text-xl font-semibold mb-2">Meta Reklam Yönetimi</h3>
+    <p class="text-gray-600 dark:text-gray-400">Facebook ve Instagram reklamlarınızı optimize ediyor, ROAS'ınızı maksimize ediyoruz.</p>
   </div>
 </div>
 
-## Yolculuğumuz
+## Neden Erlan?
 
 <div class="timeline my-16">
   <div class="timeline-item mb-12 relative pl-12">
