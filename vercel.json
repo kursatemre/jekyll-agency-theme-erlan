@@ -1,7 +1,7 @@
 {
-  "buildCommand": "bundle install && bundle exec jekyll build",
+  "buildCommand": "npm install && npm run build:css && bundle install && bundle exec jekyll build",
   "outputDirectory": "_site",
-  "installCommand": "gem install bundler && bundle install",
+  "installCommand": "gem install bundler",
   "devCommand": "bundle exec jekyll serve --port $PORT",
   "framework": null,
   "regions": ["iad1"]

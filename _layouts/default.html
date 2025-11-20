@@ -12,33 +12,15 @@
   {% seo %}
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- TailwindCSS CDN (Development Only) -->
-  <script src="https://cdn.tailwindcss.com?suppressWarnings=true"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#6366f1',
-            secondary: '#8b5cf6',
-            accent: '#ec4899',
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Poppins', 'system-ui', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
