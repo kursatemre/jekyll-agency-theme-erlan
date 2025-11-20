@@ -1,0 +1,104 @@
+# Jekyll Yapılandırması
+title: Erlan - Modern Ajans Teması
+email: info@erlan.com
+description: >-
+  Modern, profesyonel ajans ve blog teması. Web geliştirme, tasarım ve 
+  dijital pazarlama hizmetleri için özel olarak tasarlanmış Jekyll teması.
+baseurl: ""
+url: "https://kursatemre.github.io"
+
+# Sosyal Medya Bağlantıları
+social:
+  twitter: erlan_agency
+  facebook: erlan.agency
+  instagram: erlan.agency
+  linkedin: company/erlan
+  github: kursatemre
+  youtube: erlan
+
+# İletişim Bilgileri
+phone: "+90 555 123 4567"
+address: "İstanbul, Türkiye"
+
+# Yazar Bilgileri
+author:
+  name: "Erlan Ekibi"
+  email: "info@erlan.com"
+  bio: "Web geliştirme ve dijital çözümler konusunda uzman ekip"
+
+# Koleksiyonlar
+collections:
+  services:
+    output: true
+    permalink: /hizmetler/:path/
+  projects:
+    output: true
+    permalink: /portfolio/:path/
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Varsayılan Değerler
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Erlan Ekibi"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+
+# Build Ayarları
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: Europe/Istanbul
+
+# Eklentiler
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Hariç Tutulacak Dosyalar
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE
+
+# Dahil Edilecek Dosyalar
+include:
+  - _pages
+
+# Sayfalama
+paginate: 9
+paginate_path: "/blog/page:num/"
+
+# SEO Ayarları
+lang: tr
+logo: /assets/images/logo.png
+
+# Tema Renkleri (CSS değişkenleri için)
+colors:
+  primary: "#6366f1"
+  secondary: "#8b5cf6"
+  accent: "#ec4899"
+  dark: "#0f172a"
+  light: "#f8fafc"

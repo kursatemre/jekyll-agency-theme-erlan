@@ -1,0 +1,173 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+
+<!-- Hizmetler Bölümü -->
+<section id="hizmetler" class="py-20 bg-gray-50 dark:bg-slate-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        Hizmetlerimiz
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Dijital dünyada başarınız için kapsamlı çözümler sunuyoruz
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for service in site.services limit:6 %}
+      <div class="service-card group bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-slate-700">
+        <div class="text-5xl mb-4">{{ service.icon }}</div>
+        <h3 class="text-2xl font-display font-semibold mb-3 group-hover:text-primary transition-colors">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          {{ service.description }}
+        </p>
+        <a href="{{ service.url | relative_url }}" class="text-primary font-semibold inline-flex items-center group-hover:gap-2 transition-all">
+          Detaylar
+          <svg class="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="{{ '/hizmetler' | relative_url }}" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+        Tüm Hizmetleri Gör
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Önizleme -->
+<section id="portfolio" class="py-20 bg-white dark:bg-slate-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
+        Son Projelerimiz
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Müşterilerimiz için gerçekleştirdiğimiz başarılı projeler
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for project in site.projects limit:3 %}
+      <div class="project-card group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+        {% if project.image %}
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+        {% else %}
+        <div class="w-full h-64 bg-gradient-to-br from-primary to-secondary"></div>
+        {% endif %}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <h3 class="text-2xl font-display font-bold mb-2">{{ project.title }}</h3>
+            <p class="text-sm text-gray-200 mb-3">{{ project.category }}</p>
+            <a href="{{ project.url | relative_url }}" class="inline-flex items-center text-white font-semibold">
+              Projeyi İncele
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="{{ '/portfolio' | relative_url }}" class="inline-flex items-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
+        Tüm Projeleri Gör
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Bölümü -->
+<section id="blog" class="py-20 bg-gray-50 dark:bg-slate-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
+        Son Blog Yazıları
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Teknoloji ve dijital dünya hakkında güncel içerikler
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for post in site.posts limit:3 %}
+      <article class="blog-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+        {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+        {% else %}
+        <div class="w-full h-48 bg-gradient-to-br from-accent to-secondary"></div>
+        {% endif %}
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+            <span class="mx-2">•</span>
+            <span>{{ post.author | default: site.author.name }}</span>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3 hover:text-primary transition-colors">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            {{ post.excerpt | strip_html | truncatewords: 20 }}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="text-primary font-semibold inline-flex items-center hover:gap-2 transition-all">
+            Devamını Oku
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="{{ '/blog' | relative_url }}" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+        Tüm Yazıları Gör
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Bölümü -->
+<section class="py-20 bg-gradient-to-r from-primary to-secondary relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center text-white max-w-3xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+        Projenizi Hayata Geçirelim
+      </h2>
+      <p class="text-xl mb-8 text-white/90">
+        Dijital dönüşüm yolculuğunuzda yanınızdayız. Hemen iletişime geçin!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="{{ '/iletisim' | relative_url }}" class="inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-105">
+          İletişime Geç
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </a>
+        <a href="{{ '/portfolio' | relative_url }}" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-all duration-300">
+          Projelerimizi İncele
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ content }}

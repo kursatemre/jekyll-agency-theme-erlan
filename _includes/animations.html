@@ -1,0 +1,232 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Check if GSAP is available
+  if (typeof gsap === 'undefined') {
+    console.warn('GSAP not loaded, animations disabled');
+    return;
+  }
+  
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+  
+  // Respect prefers-reduced-motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    console.log('Reduced motion preferred, disabling animations');
+    return;
+  }
+  
+  // Hero Text Animation
+  const heroText = document.querySelector('.hero-text h1');
+  if (heroText) {
+    const spans = heroText.querySelectorAll('span');
+    gsap.from(spans, {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      stagger: 0.2,
+      ease: 'power4.out'
+    });
+  }
+  
+  // Hero Subtitle Animation
+  gsap.to('.hero-subtitle', {
+    duration: 1,
+    opacity: 1,
+    y: 0,
+    delay: 0.8,
+    ease: 'power3.out'
+  });
+  
+  // Hero CTA Animation
+  gsap.to('.hero-cta', {
+    duration: 1,
+    opacity: 1,
+    y: 0,
+    delay: 1.2,
+    ease: 'power3.out'
+  });
+  
+  // Hero Stats Animation
+  gsap.to('.hero-stats', {
+    duration: 1,
+    opacity: 1,
+    y: 0,
+    delay: 1.5,
+    ease: 'power3.out',
+    onComplete: animateCounters
+  });
+  
+  // Counter Animation
+  function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      gsap.to(counter, {
+        innerText: target,
+        duration: 2,
+        ease: 'power2.out',
+        snap: { innerText: 1 },
+        onUpdate: function() {
+          counter.innerText = Math.ceil(counter.innerText);
+        }
+      });
+    });
+  }
+  
+  // Parallax Effect for Hero
+  const parallaxLayers = document.querySelectorAll('[class^="parallax-layer"]');
+  if (parallaxLayers.length > 0) {
+    gsap.to('.parallax-layer-1', {
+      y: 100,
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1
+      }
+    });
+    
+    gsap.to('.parallax-layer-2', {
+      y: -100,
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1
+      }
+    });
+    
+    gsap.to('.parallax-layer-3', {
+      y: 50,
+      x: -50,
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1
+      }
+    });
+  }
+  
+  // Fade-in animations for sections
+  const fadeInElements = document.querySelectorAll('.fade-in');
+  fadeInElements.forEach(element => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse'
+      },
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: 'power3.out'
+    });
+  });
+  
+  // Service Cards Animation
+  const serviceCards = document.querySelectorAll('.service-card');
+  if (serviceCards.length > 0) {
+    gsap.from(serviceCards, {
+      scrollTrigger: {
+        trigger: serviceCards[0],
+        start: 'top 80%'
+      },
+      duration: 0.8,
+      y: 60,
+      opacity: 0,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+  }
+  
+  // Project Cards Animation
+  const projectCards = document.querySelectorAll('.project-card');
+  if (projectCards.length > 0) {
+    gsap.from(projectCards, {
+      scrollTrigger: {
+        trigger: projectCards[0],
+        start: 'top 80%'
+      },
+      duration: 0.8,
+      scale: 0.9,
+      opacity: 0,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+  }
+  
+  // Blog Cards Animation
+  const blogCards = document.querySelectorAll('.blog-card');
+  if (blogCards.length > 0) {
+    gsap.from(blogCards, {
+      scrollTrigger: {
+        trigger: blogCards[0],
+        start: 'top 80%'
+      },
+      duration: 0.8,
+      y: 60,
+      opacity: 0,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+  }
+  
+  // Card Hover 3D Effect
+  const cards = document.querySelectorAll('.service-card, .project-card, .blog-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      gsap.to(this, {
+        duration: 0.3,
+        y: -10,
+        scale: 1.02,
+        ease: 'power2.out'
+      });
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      gsap.to(this, {
+        duration: 0.3,
+        y: 0,
+        scale: 1,
+        ease: 'power2.out'
+      });
+    });
+  });
+  
+  // Magnetic Button Effect
+  const magneticButtons = document.querySelectorAll('a[class*="bg-gradient"]');
+  magneticButtons.forEach(button => {
+    button.addEventListener('mousemove', function(e) {
+      const rect = this.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      gsap.to(this, {
+        duration: 0.3,
+        x: x * 0.3,
+        y: y * 0.3,
+        ease: 'power2.out'
+      });
+    });
+    
+    button.addEventListener('mouseleave', function() {
+      gsap.to(this, {
+        duration: 0.5,
+        x: 0,
+        y: 0,
+        ease: 'elastic.out(1, 0.3)'
+      });
+    });
+  });
+  
+  // Refresh ScrollTrigger after page load
+  window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
+  });
+  
+});
+</script>
